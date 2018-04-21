@@ -1,0 +1,7 @@
+C:\Users\x00002023\source\repos\shop2Client\shop2Client\bin\Debug\shop2Client.exe.config
+C:\Users\x00002023\source\repos\shop2Client\shop2Client\bin\Debug\shop2Client.exe
+C:\Users\x00002023\source\repos\shop2Client\shop2Client\bin\Debug\shop2Client.pdb
+C:\Users\x00002023\source\repos\shop2Client\shop2Client\obj\Debug\shop2Client.csprojResolveAssemblyReference.cache
+C:\Users\x00002023\source\repos\shop2Client\shop2Client\obj\Debug\shop2Client.csproj.CoreCompileInputs.cache
+C:\Users\x00002023\source\repos\shop2Client\shop2Client\obj\Debug\shop2Client.exe
+C:\Users\x00002023\source\repos\shop2Client\shop2Client\obj\Debug\shop2Client.pdb
