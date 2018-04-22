@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using shop2API.Models;
 
 namespace shop2API.Controllers
 {
@@ -14,9 +15,9 @@ namespace shop2API.Controllers
         // GET: api/shop2
 
         [Route("Customer/all")]
-        // GET: Webflix/movies/all  -  this is how to call the method in URL after localhost bit
-        //This method returns data about all movies in the catalogue sorted in release date order (most recent to oldest)
-        public IEnumerable<Movy> GetAllCustomers() //this method returns a list of movies, called "Movy" here by Visual Studio
+        // GET: shop2/Customers/all  -  this is how to call the method in URL after localhost bit
+        //This method returns data about all Customers in the catalogue sorted in Customer ID order (High to Low)
+        public IEnumerable<Movy> GetAllCustomers() //this method returns a list of Customers, called "Movy" here by Visual Studio
         {
             return db.Customers.ToList().OrderByDescending(x => x.CustomerID);
             //db is name of context (step 21)
@@ -25,12 +26,12 @@ namespace shop2API.Controllers
             //OrderByDescending has a lambda function telling the system to order descending based on release date
         }
 
-        [Route("movies/ById/{id}")] //the id in curly braces refers to the variable passed into the GetById method below
-        // GET: Webflix/movies/ById/2
-        //This method returns data about a specific movie as specified using a movie ID
-        public Movy GetById(int id) //only returns one movie as id is unique
+        [Route("customers/ByCustomerID/{CustomerID}")] //the id in curly braces refers to the variable passed into the GetById method below
+        // GET: shop2/customers/ByCustomerID/1
+        //This method returns data about a specific movie as specified using a Customer ID
+        public Movy GetByCustomerID(int CustomerID) //only returns one movie as id is unique
         {
-            return db.Movies.SingleOrDefault(x => x.Id == id);
+            return db.Customers.SingleOrDefault(x => x.CustomersID == CustomersID);
             //look for movie x so that the Id of x is equal to the id passed in method through URL
             //SingleOrDefault can be used as we are sure id is unique so it should only return a single result
         }
